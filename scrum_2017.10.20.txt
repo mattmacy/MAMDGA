@@ -1,10 +1,10 @@
-# Week of 2017.10.4
+# Week of 2017.09.4
 Get acquainted. Handle administrivia.
 Learn updated directive from Samsung: 
     - Nvidia w/ bare metal equivalent compute performance
     - _minimum_ of 8Gbps network per guest/container
 
-# Week of 2017.10.11
+# Week of 2017.09.11
 Monday: Characterize power on reset issue (host needed to be rebooted to restore device
         to a state that the driver could attach to) when passing AMD Fury through to bhyve.
 Tuesday: 
@@ -18,13 +18,13 @@ Wednesday:
     - Look in to resources for POR. 
 Thursday: 
     - Fix POR issue with small change to ppt(4). 
-    - Declare GPU support “done” for purposes of PoC on FreeBSD/bhyve.
+    - Declare support for passthrough of GPU “done” for purposes of PoC on FreeBSD/bhyve.
 Friday: 
-    - Get acquainted with VXLAN and Joyent neighbor discovery idiosyncracies. 
+    - Get acquainted with VXLAN and Joyent neighbor discovery mechanism.
     - Start digging in to netmap/vale. 
     - Start pushing for Illumos/bhyve bits.
         
-# Week of 2017.10.18
+# Week of 2017.09.18
 Monday: 
     - Familiarize self with VALE. 
     - Initial “managed soft switch” implementation enforcing isolation by “subnet

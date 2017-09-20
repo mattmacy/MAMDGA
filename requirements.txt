@@ -1,0 +1,28 @@
+Timeline:
+- 1-2 weeks merge up DRM/AMDGPU through 4.14
+- 2-4 weeks get amdkfd working on FreeBSD
+- 4-12 weeks finish porting LKPI to Illumos
+   (time depending on how quickly I come up to speed with Illumos and how much Hans is 
+    able to do)
+    
+- Cluster deployment
+- Small matrix performance of Vega
+- Data center distribution for minimizing service latency / maximizing batching
+- 
+
+
+- Chip docs for Fiji and Vega
+- Unit tests for amdgpu + amdkfd + ROCm
+- How do we cope with dual-origin (Linux latest and DC branch)
+- guarantees about regression testing releases on all supported devices
+    (one release will work, the next won't attach, the following one will, 
+    and then the one that follows that won't again)
+
+- Upstreaming targets for the ROCm stack that is not AMD (i.e. LLVM)
+- targets for CUDA function parity support
+- clear statements for what software is supported (e.g. HIP vs other stuff)
+- upstreaming of patches
+
+
+- register and scratch bank structure (how to avoid bank conflicts)
+- specifying double buffering in hcc?

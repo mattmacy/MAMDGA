@@ -1,0 +1,6 @@
+- Install 16.04LTS under Bhyve
+- setup GPU passthrough w/ Fury
+- setup VxLAN tunnelling between two bhyve guests
+- test VxLAN perf
+- Review illumos iommu vs FreeBSD iommu
+- look in to ptnetmap usage
