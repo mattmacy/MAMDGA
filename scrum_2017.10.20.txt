@@ -1,0 +1,41 @@
+# Week of 2017.10.4
+Get acquainted. Handle administrivia.
+Learn updated directive from Samsung: 
+    - Nvidia w/ bare metal equivalent compute performance
+    - _minimum_ of 8Gbps network per guest/container
+
+# Week of 2017.10.11
+Monday: Characterize power on reset issue (host needed to be rebooted to restore device
+        to a state that the driver could attach to) when passing AMD Fury through to bhyve.
+Tuesday: 
+    - Install GP100 and Frontier Vega in desktop. 
+    - Passthrough GP100 to Bhyve. 
+    - Find that GP100 doesn’t support FLR. 
+    - Spend most of the day finding the magic combination of driver and CUDA to make 
+      CUDA samples work under Ubuntu 16.04.3. 
+    - Confirm that SGEMM performance is the same on bare metal as in bhyve.
+Wednesday: 
+    - Look in to resources for POR. 
+Thursday: 
+    - Fix POR issue with small change to ppt(4). 
+    - Declare GPU support “done” for purposes of PoC on FreeBSD/bhyve.
+Friday: 
+    - Get acquainted with VXLAN and Joyent neighbor discovery idiosyncracies. 
+    - Start digging in to netmap/vale. 
+    - Start pushing for Illumos/bhyve bits.
+        
+# Week of 2017.10.18
+Monday: 
+    - Familiarize self with VALE. 
+    - Initial “managed soft switch” implementation enforcing isolation by “subnet
+      id” (essentially transparent VLANs).
+    - Implement ioctl configuration interfaces. 
+    - Generalize internal interfaces so as to avoid code duplication and keep original
+      VALE essentially unmodified.
+Tuesday: 
+    - Implement default packet checking policies. 
+    - Update configuration interface.
+Wednesday: 
+    - Welcome to SCRUM!
+    - Planned: 
+        - Start work on user land bridge w/ focus on RPC configuration interface.
