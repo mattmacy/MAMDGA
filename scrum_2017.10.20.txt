@@ -5,7 +5,8 @@ Learn updated directive from Samsung:
     - _minimum_ of 8Gbps network per guest/container
 
 # Week of 2017.09.11
-Monday: Characterize power on reset issue (host needed to be rebooted to restore device
+Monday: 
+    - Characterize power on reset issue (host needed to be rebooted to restore device
         to a state that the driver could attach to) when passing AMD Fury through to bhyve.
 Tuesday: 
     - Install GP100 and Frontier Vega in desktop. 
@@ -37,5 +38,5 @@ Tuesday:
     - Update configuration interface.
 Wednesday: 
     - Welcome to SCRUM!
-    - Planned: 
-        - Start work on user land bridge w/ focus on RPC configuration interface.
+    - Start work on user land bridge w/ focus on RPC configuration interface.
+    - ACTUALLY, spend most of afternoon / evening fighting with toolchain. :-/
