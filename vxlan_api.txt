@@ -1,0 +1,78 @@
+/*  
+ * VERB command set
+ * 
+ *   Add forwarding table entry map destination host mac to remote ip
+ * - UPDATE_FTE:<seqno> mac: big-endian 6 bytes
+ *                raddr: <4-tuple| v6addr w/ no symbolic>
+ *             expire: 8 bytes - useconds
+ *         (result:<seqno (gen: 4 byte))
+ *
+ *  Get forwarding entry details
+ * - GET_FTE:<seqno> big-endian 6 bytes
+ *       (result:<seqno> (raddr: <4-tuple| v6addr w/ no symbolic>
+ *              expire: 8 bytes - useconds
+ *                 gen: 4 byte))
+ * 
+ * - REMOVE_FTE:<seqno> vxmac: big-endian 6 bytes
+ *       (result:<seqno>)
+ *
+ * - GET_ALL_FTE:<seqno>
+ *         (result: (mac: big-endian 6 bytes
+ *                 raddr: <4-tuple| v6addr w/ no symbolic>
+ *                expire: 8 bytes - useconds
+ *                   gen: 4 byte)*)  
+ *
+ *   manage physical L2 table entries for remote IP
+ * - SET_PHYS_ND:<seqno> mac: big-endian 6 bytes raddr: <4-tuple| v6addr w/ no symbolic>
+ *   (result:<seqno>)
+ *
+ * - DEL_PHYS_ND:<seqno> mac: big-endian 6 bytes | raddr: <4-tuple| v6addr w/ no symbolic>
+ *   (result:<seqno>)
+ *
+ * - GET_PHYS_ND:<seqno> raddr: <4-tuple| v6addr w/ no symbolic>
+ *      (result:<seqno>  (mac: big-endian 6 bytes))
+ *
+ * - GET_ALL_PHYS_ND:<seqno>
+ *       (result:<seqno> (mac: big-endian 6 bytes
+ *               raddr: <4-tuple| v6addr w/ no symbolic>)*)
+ *
+ *   manage vxlan L2 table entries for remote IP
+ * - SET_VX_ND:<seqno> mac: big-endian 6 bytes raddr: <4-tuple| v6addr w/ no symbolic>
+ *   (result:<seqno>)
+ *
+ * - DEL_VX_ND:<seqno> mac: big-endian 6 bytes |
+ *             raddr: <4-tuple| v6addr w/ no symbolic>
+ *   (result:<seqno>)
+ *
+ * - GET_VX_ND:<seqno> raddr: <4-tuple| v6addr w/ no symbolic>
+ *      (result:<seqno>  (mac: big-endian 6 bytes))
+ *
+ * - GET_ALL_VX_ND:<seqno>
+ *       (result:<seqno> (mac: big-endian 6 bytes
+ *               raddr: <4-tuple| v6addr w/ no symbolic>)*)
+ *
+ *   map 5-byte local VM mac to vlanid|vxlanid
+ * - UPDATE_VM_VNI:<seqno> vlanid: 2-bytes vxlanid: 3-bytes mac: 6-bytes
+ *     (result:<seqno>  (gen: 4 byte))
+ *
+ * - GET_VM_VNI:<seqno> mac: 6-bytes
+ *       (result:<seqno>   (vlanid: 2-bytes
+ *              vxlanid: 3-bytes
+ *                  gen: 4 byte))
+ *
+ * - REMOVE_VM_VNI:<seqno> mac: big-endian 6 bytes
+ *       (result:<seqno>)
+ *
+ * - GET_ALL_VM_VNI:<seqno>
+ *       (result:<seqno>   (mac: 6 bytes 
+ *              vlanid: 2-bytes
+ *              vxlanid: 3-bytes
+ *                  gen: 4 byte)*)
+ *
+ * - UPDATE_DEFAULT_ROUTE:<seqno> raddr: <4-tuple| v6addr w/ no symbolic>
+ *       (result:<seqno> (gen: 4 bytes))
+ *
+ * - REMOVE_DEFAULT_ROUTE:<seqno> raddr: <4-tuple| v6addr w/ no symbolic>
+ *       (result:<seqno>)
+ *
+ */
